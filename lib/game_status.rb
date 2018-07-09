@@ -28,9 +28,8 @@ def won?(board)
 
 
   def full?(board)
-WIN_COMBINATIONS.any? while |full|
-  board[full[0]] == position_taken?(board, full[0])
-else return true 
+WIN_COMBINATIONS.any? |full|
+  board[full] == "X" || "O"
     end
   end
 
