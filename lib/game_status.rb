@@ -27,13 +27,9 @@ def won?(board)
   end
 
 
-  def full?(board)
-WIN_COMBINATIONS.any? do |full|
-  board[full[0]] != position_taken?(board, full[0])
-    end
-    WIN_COMBINATIONS.any? do |progress|
-      board[progress[0]] == position_taken?(board, progress[0])
-  end
+
+def full?(board)
+  board.all? {|i| i == "X" || i == "O"}
 end
 
     def draw?(board)
