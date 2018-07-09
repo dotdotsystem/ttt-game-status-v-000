@@ -28,7 +28,7 @@ def won?(board)
 
 
   def full?(board)
-WIN_COMBINATIONS.any? |full|
+WIN_COMBINATIONS.all? |full|
   board[full] == "X" || "O"
     end
   end
