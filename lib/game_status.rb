@@ -28,8 +28,8 @@ def won?(board)
 
 
   def full?(board)
-  board.find do |full|
-      board[full] != position_taken?(board, index)
+  index.find do |full|
+      index[full] != position_taken?(board, index)
     end
     end
 
