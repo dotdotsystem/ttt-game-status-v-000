@@ -15,9 +15,8 @@ WIN_COMBINATIONS = [
  ]
 
  def full?(board)
-      WIN_COMBINATIONS.all? do |full| 
+      WIN_COMBINATIONS.all? do |full|
         board[full] == position_taken?(board, index)
-      binding.pry
     end
   end
 
