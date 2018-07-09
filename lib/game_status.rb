@@ -1,7 +1,10 @@
+
+ require 'pry'
+
 def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
 end
- require 'pry'
+
 
 WIN_COMBINATIONS = [
  [0,1,2],
@@ -24,6 +27,6 @@ WIN_COMBINATIONS = [
 def won?(board)
   WIN_COMBINATIONS.detect do |win_combo|
     board[win_combo[0]] == board[win_combo[1]] && board[win_combo[1]] == board[win_combo[2]] && position_taken?(board, win_combo[0])
-
+binding.pry 
     end
   end
