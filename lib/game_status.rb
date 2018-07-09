@@ -33,7 +33,7 @@ def won?(board)
       position_taken?(board, full[0])
     end
       WIN_COMBINATIONS.inspect do |full|
-        board[full[0]] == !position_taken?(board, full[0])
+      !position_taken?(board, full[0])
 end
     end
 
