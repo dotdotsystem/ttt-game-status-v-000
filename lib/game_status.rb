@@ -31,7 +31,6 @@ def won?(board)
 WIN_COMBINATIONS.any? do |full|
   board[full[0]] == position_taken?(board, full[0])
     end
-    end
   end
 
     def draw?(board)
