@@ -28,7 +28,8 @@ def won?(board)
 
 
   def full?(board)
-WIN_COMBINATIONS.find {|full| full != "X" || "O"}
+WIN_COMBINATIONS.any? do |full|
+  board[full[0]] == position_taken?(board, full[0])
     end
     end
 
