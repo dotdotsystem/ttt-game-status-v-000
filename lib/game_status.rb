@@ -29,7 +29,7 @@ def won?(board)
 
   def full?(board)
 WIN_COMBINATIONS.all? |full|
-  board[full[0]] == position_taken?(board, full[0])
+  board[full[0]] != position_taken?(board, full[0])
     end
   end
 
