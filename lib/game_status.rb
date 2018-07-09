@@ -17,11 +17,6 @@ WIN_COMBINATIONS = [
  [0,4,8]
  ]
 
- def full?(board)
-      WIN_COMBINATIONS.all? do |full|
-        board[full] == position_taken?(board, index)
-    end
-  end
 
 
 def won?(board)
@@ -30,3 +25,11 @@ def won?(board)
 binding.pry 
     end
   end
+
+
+  def full?(board)
+    WIN_COMBINATIONS.detect do |full|
+      board[full[0]] != board[full[1]] && board[full[1]] != board[full[2]] && position_taken?(board, full[0])
+  binding.pry 
+      end
+    end
