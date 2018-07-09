@@ -32,8 +32,12 @@ def full?(board)
   board.all? {|full| full == "X" || full == "O"}
 end
 
-    def draw?(board)
-      WIN_COMBINATIONS.detect do |draw|
-        board[draw[0]] != board[draw[1]] && board[draw[1]] != board[draw[2]] && position_taken?(board, draw[0])
+def draw?(board)
+  if !won?(board) && full?(board)
+    return true
+  elsif !won?(board) && !full?(board)
+    return false
+  else won?(board)
+    return false
   end
-      end
+end
