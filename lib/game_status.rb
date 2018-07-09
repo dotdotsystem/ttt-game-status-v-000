@@ -31,9 +31,10 @@ def won?(board)
 WIN_COMBINATIONS.any? do |full|
   board[full[0]] == position_taken?(board, full[0])
     end
-    WIN_COMBINATIONS.all? do |full|
-      board[full[0]] != position_taken?(board, full[0]) && board[full[1]] != board[full[2]]
+    WIN_COMBINATIONS.detect do |full|
+      board[full[0]] != board[full[1]] && board[full[1]] != board[full[2]] && position_taken?(board, full[0])
     end
+  end
 
     def draw?(board)
       WIN_COMBINATIONS.detect do |draw|
