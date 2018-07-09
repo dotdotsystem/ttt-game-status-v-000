@@ -28,7 +28,7 @@ def won?(board)
 
   def full?(board)
     WIN_COMBINATIONS.inspect do |full|
-      board[full[0]] != board[full[1]] && board[full[1]] != board[full[2]] && !position_taken?(board, full[0])
+      board[full[0]] != board[full[1]] && board[full[1]] != board[full[2]] && position_taken?(board, full[0])
 end
     end
 
