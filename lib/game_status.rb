@@ -21,7 +21,7 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   WIN_COMBINATIONS.detect do |win_combo|
-    board[win_combo[0]] == board[win_combo[1]] && board[win_combo[1]] == 
+    board[win_combo[0]] == board[win_combo[1]] && board[win_combo[1]] ==
     board[win_combo[2]] && position_taken?(board, win_combo[0])
     end
   end
@@ -29,7 +29,7 @@ def won?(board)
 
   def full?(board)
     WIN_COMBINATIONS.inspect do |full|
-      board[full[0]] != board[full[1]] && board[full[1]] != board[full[2]] && 
+      board[full[0]] != board[full[1]] && board[full[1]] != board[full[2]] &&
       position_taken?(board, full[0])
 end
     end
