@@ -29,7 +29,7 @@ def won?(board)
 
   def full?(board)
   board.all? do |full|
-      board[full] != position_taken?(board)
+      board[full] != position_taken?(board,index)
 else false
     end
     end
