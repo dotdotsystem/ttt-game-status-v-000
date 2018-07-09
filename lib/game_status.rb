@@ -28,8 +28,9 @@ def won?(board)
 
 
   def full?(board)
-WIN_COMBINATIONS.any? do |full|
+WIN_COMBINATIONS.any? while |full|
   board[full[0]] == position_taken?(board, full[0])
+else return true 
     end
   end
 
